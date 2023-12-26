@@ -26,11 +26,29 @@ def calculate_intersections(path):
 
     image = np.zeros_like(img1, dtype = np.uint8)
 
+    image = cv2.line(image, (0, 5), (x, 5), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 9), (x, 9), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 13), (x, 13), (255, 255, 255), 1)
     image = cv2.line(image, (0, 18), (x, 18), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 22), (x, 22), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 26), (x, 26), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 30), (x, 30), (255, 255, 255), 1)
     image = cv2.line(image, (0, 35), (x, 35), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 39), (x, 39), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 44), (x, 44), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 48), (x, 48), (255, 255, 255), 1)
     image = cv2.line(image, (0, 53), (x, 53), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 57), (x, 57), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 62), (x, 62), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 66), (x, 66), (255, 255, 255), 1)
     image = cv2.line(image, (0, 72), (x, 72), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 76), (x, 76), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 81), (x, 81), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 85), (x, 85), (255, 255, 255), 1)
     image = cv2.line(image, (0, 90), (x, 90), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 94), (x, 94), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 99), (x,99), (255, 255, 255), 1)
+    image = cv2.line(image, (0, 103), (x, 103), (255, 255, 255), 1)
     image = cv2.line(image, (0, 108), (x, 108), (255, 255, 255), 1)
 
     ## To draw vertical lines
@@ -44,12 +62,30 @@ def calculate_intersections(path):
 
     l3vStart = (halfx + quarterx, 0)
     l3vEnd = (halfx + quarterx, y)
-
+ 
+    image = cv2.line(image, (5, 0), (5, y), (255, 255, 255), 1)
+    image = cv2.line(image, (9, 0), (9, y), (255, 255, 255), 1)
+    image = cv2.line(image, (13, 0), (13, y), (255, 255, 255), 1)
     image = cv2.line(image, (18, 0), (18, y), (255, 255, 255), 1)
+    image = cv2.line(image, (22, 0), (22, y), (255, 255, 255), 1)
+    image = cv2.line(image, (26, 0), (26, y), (255, 255, 255), 1)
+    image = cv2.line(image, (30, 0), (30, y), (255, 255, 255), 1)
     image = cv2.line(image, (35, 0), (35, y), (255, 255, 255), 1)
+    image = cv2.line(image, (39, 0), (39, y), (255, 255, 255), 1)
+    image = cv2.line(image, (44, 0), (44, y), (255, 255, 255), 1)
+    image = cv2.line(image, (48, 0), (48, y), (255, 255, 255), 1)
     image = cv2.line(image, (53, 0), (53, y), (255, 255, 255), 1)
+    image = cv2.line(image, (57, 0), (57, y), (255, 255, 255), 1)
+    image = cv2.line(image, (62, 0), (62, y), (255, 255, 255), 1)
+    image = cv2.line(image, (66, 0), (66, y), (255, 255, 255), 1)
     image = cv2.line(image, (72, 0), (72, y), (255, 255, 255), 1)
+    image = cv2.line(image, (76, 0), (76, y), (255, 255, 255), 1)
+    image = cv2.line(image, (81, 0), (81, y), (255, 255, 255), 1)
+    image = cv2.line(image, (85, 0), (85, y), (255, 255, 255), 1)
     image = cv2.line(image, (90, 0), (90, y), (255, 255, 255), 1)
+    image = cv2.line(image, (94, 0), (94, y), (255, 255, 255), 1)
+    image = cv2.line(image, (99, 0), (99, y), (255, 255, 255), 1)
+    image = cv2.line(image, (103, 0), (103, y), (255, 255, 255), 1)
     image = cv2.line(image, (108, 0), (108, y), (255, 255, 255), 1)
 
 
@@ -64,7 +100,7 @@ def calculate_intersections(path):
                 count += 1
     return count
 
-current_num = 7
+current_num = 9
 
 num1 = calculate_intersections(f"NumberData/Number{current_num}/num1.jpg")
 num2 = calculate_intersections(f"NumberData/Number{current_num}/num2.jpg")
@@ -74,19 +110,43 @@ num9 = calculate_intersections(f"NumberData/Number{current_num}/num9.jpg")
 num11 = calculate_intersections(f"NumberData/Number{current_num}/num11.jpg")
 num14 = calculate_intersections(f"NumberData/Number{current_num}/num14.jpg")
 
-total = num1 + num2 + num4 + num6 + num9 + num11 + num14
+total = num1 + num2 + num4 + num6  + num9 + num11 + num14
 
 avg = total // 7
 print(avg)
 
 ###
-# 1: 14
-# 2: 22
-# 3: 33
-# 4: 22
-# 5: 27
-# 6: 30
-# 7: 21
-#
+# 1: 61
+# 2: 84
+# 3: 96
+# 4: 81
+# 5: 103
+# 6: 102
+# 7: 73
+# 8: 115
+# 9: 95
+###
 
+###
+# 1: 31
+# 2: 47
+# 3: 50
+# 4: 43
+# 5: 51
+# 6: 52
+# 7: 41
+# 8: 60
+# 9: 54
+###
+
+###
+# 1: 12
+# 2: 24
+# 3: 25
+# 4: 25
+# 5: 24
+# 6: 26
+# 7: 21
+# 8: 29
+# 9: 25
 ###
