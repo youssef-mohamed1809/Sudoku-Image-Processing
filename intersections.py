@@ -30,8 +30,9 @@ def center_image(img1):
 def calculate_intersections(path):
     img1 = cv2.imread(path)
     img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
+    img1 = cv2.threshold(img1, 1, 255, cv2.THRESH_BINARY)
     img1 = center_image(img1)
-
+    plt.imshow(img1, cmap='gray')
 
     x = img1.shape[0]
     y = img1.shape[1]
@@ -89,6 +90,20 @@ avg_horizontal = total_horizontal // 7
 avg_vertical = total_vertical // 7
 print(f"Average Horizontal Lines: {avg_horizontal}")
 print(f"Average Vertical Lines: {avg_vertical}")
+
+
+###
+# 1: 11, 16      20 , 20
+# 2: 22, 26      26 , 26
+# 3: 22 ,28      28 , 28
+# 4: 17,21       21 , 21
+# 5: 22,28       28 , 28
+# 6: 17,23       23 , 23
+# 7: 22,21       21 , 21
+# 8: 25,30       30 , 30
+# 9: 20,21       21 , 21
+
+###
 
 
 ###
