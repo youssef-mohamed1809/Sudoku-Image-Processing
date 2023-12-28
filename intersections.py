@@ -113,6 +113,6 @@ print(f"Average Vertical Lines: {avg_vertical}")
 # 6: 38, 45
 # 7: 24, 28
 # 8: 51, 44
-# 9: 
+# 9: 41, 43
 
 ###
